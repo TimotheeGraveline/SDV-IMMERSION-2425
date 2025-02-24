@@ -1,0 +1,359 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../assets/images/bg.jpg) rgb(55,123,192) top center repeat-x ;    
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.content-profile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile {
+    width: 60%;
+}
+
+.avatar {
+    width: 50%;
+    border-radius: 50%;
+    border: 10px solid rgb(239,177,5);
+}
+
+
+h1.name {
+    font-family: "Jersey 10", sans-serif;
+    color: rgb(239,177,5);
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+}
+
+.contacts{
+    margin-top: 10px;
+    background: rgb(242,242,242);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+    padding: 0 20px;
+    border-bottom: 3px #fff solid;
+}
+
+.contacts p{
+    color: rgb(55,126,192);
+    font-size: 14px;    
+}
+
+.magic-pixel{
+    background: rgb(242,242,242);
+    padding: 10px;
+    border-top: 8px rgb(239,177,5) solid;
+    border-bottom: 13px rgb(0,72,120) solid;
+    color: rgb(55,126,192);
+    font-size: 14px;   
+}
+
+.occupation {
+    font-family: "Jersey 10", sans-serif;
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+}
+
+.occupation a{
+    color: #fff;
+    text-decoration: none;
+}
+.occupation a i{
+    font-size: 20px;
+}
+
+.scroll {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+}
+
+.scroll div {
+    white-space: nowrap;
+    animation: scroll var(--time) linear infinite;
+    animation-delay: calc(var(--time)*-1);
+}
+
+.scroll div:nth-child(2) {
+    animation: scroll2 var(--time) linear infinite;
+    animation-delay: calc(var(--time)/-2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.scroll div span {
+    font-family: "Jersey 10", sans-serif;
+    display: inline-flex;
+    margin: 3px 10px;
+    background: rgb(239,177,5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+
+.scroll div span:hover {
+    background: rgb(0,72,120);
+    cursor: pointer;
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bloc {
+    border-top: 20px rgb(239,177,5) solid;
+    border-radius: 10px 10px 0 0;
+    margin: 20px;
+    background-color: rgb(242, 242, 242);
+    width: 40%;
+    border-bottom: 13px rgb(0,72,120) solid;
+}
+
+.bloc h2 {
+    font-family: "Jersey 10", sans-serif;
+    color: #fff;
+    background:  rgb(0,72,120);
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0 20px;
+    border-bottom: 10px #fff solid;
+}
+
+.bloc ul {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.bloc ul li {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 8px 0 0 0;
+    transition: 0.5s;
+}
+.bloc ul li span {
+    margin-left: 10px;
+}
+.bloc ul li .bar{
+    margin-top: 3px;
+    height: 5px;
+    width: 100%;
+    background: #fff;
+}
+.bloc ul li .bar .bar-prog{
+    height: 5px;
+    background: rgb(0,72,120);
+}
+
+.bloc ul li:hover {
+    background: rgb(239,177,5);
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+footer {
+    display: flex;
+    position: relative;
+    background-color: #154360;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    height: 100px;
+}
+
+.scrolling-image-container {
+    overflow: hidden;
+    position: absolute;
+    bottom: 100px;
+    z-index: -1;
+    width: 100%;
+    height: 1080px;
+}
+.scrolling-image-3 {
+    position: absolute;
+    bottom: 0;
+    background: url("../assets/images/motifBG-Nuage.png") repeat-x;
+    height: 500px;
+    width: 3510px;
+    animation: slideBG 8s linear infinite;
+}
+.scrolling-image-1 {
+    position: absolute;
+    bottom: 0;
+    background: url("../assets/images/motifBG-2.png") repeat-x;
+    height: 500px;
+    width: 3510px;
+    animation: slideBG 10s linear infinite;
+}
+.scrolling-image-2 {
+    position: absolute;
+    bottom: 0;
+    background: url("../assets/images/motifBG.png") repeat-x;
+    height: 500px;
+    width: 3510px;
+    animation: slideBG 5s linear infinite;
+}
+
+@keyframes slideBG {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-1170px); /* The image width */
+  }
+}
+
+/* Animation du sprite du personnage qui court */
+
+.sprite-container {
+    position: relative;
+    width: 100%;
+}
+
+.sprite-mega {
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    background:  url('../assets/images/sprite-megaman-sdv.png') no-repeat 0% 0%;
+    animation: sprite 1s steps(7) infinite;    
+}
+
+@keyframes sprite {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 0; }
+}
+
+/* Responsive */
+
+@media (max-width: 1205px) {
+    .container{
+        max-width: 980px;
+    }
+}
+@media (max-width: 600px) {
+    .container{
+        width: 100%;
+        padding: 20px 0;
+    }
+    .profile {
+        width: 100%;
+    }
+    .avatar {
+        width: 20%;
+        border-radius: 50%;
+        border: 10px solid rgb(239,177,5);
+    }
+    .contacts{
+        border-radius: 0;
+    }
+    .bloc {
+        width: 100%;
+    }
+    
+}
+@media (max-width: 768px) {
+
+}
+@media (min-width: 993px) {
+
+}
+@media (max-width: 992px) and (min-width: 601px) {
+    .container{
+        max-width: 100%;
+    }
+    .profile {
+        width: 100%;
+    }
+
+    .avatar {
+        width: 50%;
+        border-radius: 50%;
+        border: 10px solid rgb(239,177,5);
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .bloc {
+        width: 49%;
+        margin: 20px 0px;
+    }
+
+}
+@media (max-width: 992px) {
+
+}
+
+
+
