@@ -19,21 +19,26 @@ p {
   font-style: normal;
 }
 
+@font-face {
+	font-family: 'Gotham';
+	src: url(‘../assets/fonts/GothamBook.ttf’) format(‘truetype’)
+}
+
 body{
-    margin: 0;
-    padding: 0;
-    background: url(../assets/images/bg.jpg) rgb(55,123,192) top center repeat-x ;    
-    min-height: 600px;
+    /* marge et bg */
+
+    
     background-attachment: fixed;
-    background-position: center;
+    background-position: 100px 50px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 300px;
+    font-family: 'Gotham', Arial, Helvetica, sans-serif;
 }
 
 .container{
     max-width: 980px;
-    margin-left: auto;
-    margin-right: auto;
+    /* centrer automatiquement avec marges */
+
     padding: 20px;
 }
 .content-profile {
@@ -43,28 +48,28 @@ body{
 }
 
 .profile {
-    width: 60%;
+    /* largeur à 60% */
+
 }
 
 .avatar {
     width: 50%;
-    border-radius: 50%;
-    border: 10px solid rgb(239,177,5);
+    /* Bords ronds */
+
+    border: 10px solid #E17551;
 }
 
-
 h1.name {
+    /* Fonts Jersey 10, taille 50 et orange */
     font-family: "Jersey 10", sans-serif;
-    color: rgb(239,177,5);
+
     font-size: 50px;
-    font-weight: normal;
-    font-style: normal;
     margin: 0;
 }
 
 .contacts{
     margin-top: 10px;
-    background: rgb(242,242,242);
+    background: rgb(248,243,240);
     display: flex;
     justify-content: space-between;
     border-radius: 10px 10px 0 0;
@@ -73,16 +78,16 @@ h1.name {
 }
 
 .contacts p{
-    color: rgb(55,126,192);
+    color: rgb(38,6,93);
     font-size: 14px;    
 }
 
 .magic-pixel{
-    background: rgb(242,242,242);
+    background: rgb(248,243,240);
     padding: 10px;
-    border-top: 8px rgb(239,177,5) solid;
+    border-top: 8px #E17551 solid;
     border-bottom: 13px rgb(0,72,120) solid;
-    color: rgb(55,126,192);
+    color: rgb(19,0,50);
     font-size: 14px;   
 }
 
@@ -94,13 +99,14 @@ h1.name {
 }
 
 .occupation a{
-    color: #fff;
-    text-decoration: none;
+    /* blanc et sans soulignage */
+
 }
 .occupation a i{
     font-size: 20px;
 }
 
+/* animation scroll avec variable time */
 .scroll {
     display: flex;
     width: 100%;
@@ -138,12 +144,11 @@ h1.name {
         transform: translateX(-200%);
     }
 }
-
 .scroll div span {
     font-family: "Jersey 10", sans-serif;
     display: inline-flex;
     margin: 3px 10px;
-    background: rgb(239,177,5);
+    background: #E17551;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -152,30 +157,29 @@ h1.name {
 }
 
 .scroll div span:hover {
-    background: rgb(0,72,120);
-    cursor: pointer;
-}
+    /* animation au hover changement de fond 19,0,50 et pointer */
 
+}
 
 .content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /* wrap et justify space-around*/
+  
 }
 
 .bloc {
-    border-top: 20px rgb(239,177,5) solid;
+    border-top: 20px #E17551 solid;
     border-radius: 10px 10px 0 0;
     margin: 20px;
     background-color: rgb(242, 242, 242);
     width: 40%;
-    border-bottom: 13px rgb(0,72,120) solid;
+    border-bottom: 13px rgb(38,6,93) solid;
 }
 
 .bloc h2 {
     font-family: "Jersey 10", sans-serif;
     color: #fff;
-    background:  rgb(0,72,120);
+    background:  rgb(38,6,93);
     font-size: 50px;
     font-weight: normal;
     font-style: normal;
@@ -185,7 +189,8 @@ h1.name {
 }
 
 .bloc ul {
-    list-style-type: none;
+    /* style de liste */
+
     padding: 0 20px;
 }
 
@@ -208,27 +213,28 @@ h1.name {
 }
 .bloc ul li .bar .bar-prog{
     height: 5px;
-    background: rgb(0,72,120);
+    /* couleur de fond de barre de progression 240 130 64 */
+
 }
 
 .bloc ul li:hover {
-    background: rgb(239,177,5);
+    background: #26065D;
     font-size: 30px;
     text-transform: uppercase;
     color: #fff;
 }
 
+/* FOOTER */
 
 footer {
     display: flex;
     position: relative;
-    background-color: #154360;
+    background-color: #F08240;
     color: #FFFFFF;
     text-align: center;
     padding: 20px 0;
     height: 100px;
 }
-
 .scrolling-image-container {
     overflow: hidden;
     position: absolute;
@@ -262,14 +268,14 @@ footer {
     animation: slideBG 5s linear infinite;
 }
 
-@keyframes slideBG {
+/*@keyframes slideBG {
   0% {
     transform: translate(0);
   }
   100% {
-    transform: translate(-1170px); /* The image width */
+    transform: translate(-1170px); 
   }
-}
+}*/
 
 /* Animation du sprite du personnage qui court */
 
@@ -284,16 +290,17 @@ footer {
     top: -100px;
     width: 200px;
     height: 200px;
-    background:  url('../assets/images/sprite-megaman-sdv.png') no-repeat 0% 0%;
-    animation: sprite 1s steps(7) infinite;    
+    background:  url('../assets/images/sprite-megaman-final.png') no-repeat 0% 0%;
+    animation: sprite 0.5s steps(7) infinite;    
 }
 
-@keyframes sprite {
+/*@keyframes sprite {
     from { background-position: 0% 0%; }
     to { background-position: 100% 0; }
-}
+}*/
 
 /* Responsive */
+/*
 
 @media (max-width: 1205px) {
     .container{
@@ -311,7 +318,7 @@ footer {
     .avatar {
         width: 20%;
         border-radius: 50%;
-        border: 10px solid rgb(239,177,5);
+        border: 10px solid #F08240;
     }
     .contacts{
         border-radius: 0;
@@ -328,6 +335,9 @@ footer {
 
 }
 @media (max-width: 992px) and (min-width: 601px) {
+    body{
+        background-image: none;      
+    }
     .container{
         max-width: 100%;
     }
@@ -338,22 +348,19 @@ footer {
     .avatar {
         width: 50%;
         border-radius: 50%;
-        border: 10px solid rgb(239,177,5);
-    }
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        border: 10px solid #F08240;
     }
     .bloc {
-        width: 49%;
-        margin: 20px 0px;
+        width: 100%;
+        margin: 20 0;
     }
 
 }
 @media (max-width: 992px) {
-
+    body{
+        background-image: none;    
+    }
 }
 
-
+*/
 
